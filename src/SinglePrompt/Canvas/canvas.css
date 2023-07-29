@@ -1,0 +1,44 @@
+
+.single-prompt {
+
+  .canvas {
+
+    .disabled {
+      pointer-events: none;
+    }
+
+    .drawing-controls {
+      align-items: center;
+      border: 1px #9c9c9c solid;
+      border-top: none;
+      border-radius: 0px 0px 4px 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      padding: 8px;
+        
+      .more-color-picker {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+      }
+    
+      .canvas-tool {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 18px;
+        padding: 3px;
+        width: 18px;
+    
+        &.selected {
+          background-color: #D3E5F9;
+        }
+    
+        &:not(.selected):hover {
+          background-color: #E8F1FE;
+        }
+      }
+    }
+  }
+}

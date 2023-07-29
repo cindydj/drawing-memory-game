@@ -1,0 +1,11 @@
+.submission-area {
+  align-items: center;
+  border: 1px #9c9c9c solid;
+  border-radius: 4px;
+  display: flex;
+  /* Height of the canvas + height of the drawing tool section. */
+  height: 340px;
+  justify-content: center;
+  /* Width of the canvas. */
+  width: 300px;
+}

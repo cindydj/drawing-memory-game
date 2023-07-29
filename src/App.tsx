@@ -1,20 +1,22 @@
 import React from "react";
+
 import "./App.css";
 import SinglePrompt from "./SinglePrompt/SinglePrompt";
+import PITCHFORK_EMOJI from "./images/prompts/pitchfork.png";
 
 function App() {
   return (
     <div className="App">
       <div className="title">
-        Logo Memory Game
+        Emoji Memory Game
         <div className="subtitle">
-          Can you draw the logos below from memory?
+          Can you draw the emojis below from memory?
         </div>
       </div>
       <div className="prompt-list">
-        <SinglePrompt name="Hello" />
-        <SinglePrompt name="World" />
-        <SinglePrompt name="Yay" />
+        <SinglePrompt name=":pitchforks:" source={PITCHFORK_EMOJI} />
+        <SinglePrompt name="World" source="" />
+        <SinglePrompt name="Yay" source="" />
       </div>
     </div>
   );

@@ -3,59 +3,17 @@
   background-color: white;
   border: 1px #1071FC solid;
   border-radius: 4px;
-  padding: 10px 15px;
+  padding: 15px 20px;
 
-  .logo-name {
-    font-size: 14px;
-    padding-bottom: 5px;
+  .prompt-name {
+    font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 10px;
   }
 
-  .canvas-and-logo-comparison {
+  .canvas-and-comparison {
     display: flex;
     flex-direction: row;
-
-    .canvas {
-      
-      .drawing-controls {
-        align-items: center;
-        border: 1px #9c9c9c solid;
-        border-top: none;
-        border-radius: 0px 0px 4px 4px;
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        padding: 5px;
-        
-        .more-color-picker {
-          background: lightblue;
-          border-radius: 50%;
-          cursor: pointer;
-          height: 15px;
-          margin: 1.5px;
-          transition: all .25s ease;
-          width: 15px;
-
-          &:hover {
-            width: 18px;
-            height: 18px;
-            margin: 0px;
-          }
-        }
-
-        .eraser-option {
-          cursor: pointer;
-          height: 15px;
-          margin: 1.5px;
-          transition: all .25s ease;
-          width: 15px;
-
-          &:hover {
-            width: 18px;
-            height: 18px;
-            margin: 0px;
-          }
-        }
-      }
-    }
+    gap: 20px;
   }
 }

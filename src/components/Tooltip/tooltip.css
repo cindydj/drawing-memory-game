@@ -1,0 +1,25 @@
+.tooltip-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip {
+  bottom: 30px;
+  position: absolute;
+  visibility: hidden;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  background-color: #333333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.tooltip-trigger {
+  display: flex;
+
+  &:hover + .tooltip {
+    visibility: visible;
+  }
+}
