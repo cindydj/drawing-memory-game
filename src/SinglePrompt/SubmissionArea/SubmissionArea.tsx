@@ -4,20 +4,21 @@ import "./submission-area.css";
 import Button from "../../components/Button/Button";
 
 interface SubmissionAreaProps {
-  emojiSource: string;
+  source: string;
   isPromptSubmitted: boolean;
-  setIsPromptSubmitted: (isPromptSubmitted: boolean) => void;
+  /* Callback called when prompt is submitted. */
+  setIsPromptSubmitted: () => void;
 }
 
 function SubmissionArea(props: SubmissionAreaProps) {
-  const { emojiSource, isPromptSubmitted, setIsPromptSubmitted } = props;
+  const { source, isPromptSubmitted, setIsPromptSubmitted } = props;
 
   return (
     <div className="submission-area">
       {isPromptSubmitted ? (
-        <img className="canvas-tool" src={emojiSource} />
+        <img className="canvas-tool" src={source} />
       ) : (
-        <Button onClick={(): void => setIsPromptSubmitted(true)}>Submit</Button>
+        <Button onClick={setIsPromptSubmitted}>Submit</Button>
       )}
     </div>
   );

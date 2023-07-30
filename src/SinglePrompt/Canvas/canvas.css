@@ -16,7 +16,13 @@
       flex-direction: row;
       gap: 8px;
       padding: 8px;
-        
+
+      .separator {
+        border-right: 1px #9c9c9c solid;
+        height: 20px;
+        margin: 0px 5px;
+      }
+
       .more-color-picker {
         border-radius: 50%;
         cursor: pointer;

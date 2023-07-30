@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 import { SketchPicker } from "react-color";
 
@@ -36,15 +36,21 @@ const svgStyles = {
 interface CanvasProps {
   name: string;
   disabled?: boolean;
+  /* Callback called upon initializing canvas. */
+  addCanvasRefCb: (promptName: string, canvasRef: any) => void;
 }
 
 function Canvas(props: CanvasProps) {
-  const { name, disabled } = props;
+  const { name, disabled, addCanvasRefCb } = props;
 
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
   const [currentColorHex, setCurrentColorHex] = useState(DEFAULT_DRAWING_COLOR);
   const [currentTool, setCurrentTool] = useState<ToolType>(ToolType.DRAW);
   const canvasRef = useRef<any>();
+
+  useEffect(() => {
+    addCanvasRefCb(name, canvasRef);
+  }, []);
 
   // Helper functions to update the selected tool in the canvas.
   const setDrawToolMode = (): void => {
@@ -102,7 +108,7 @@ function Canvas(props: CanvasProps) {
                   onClick={(): void => setIsColorPickerOpen(!isColorPickerOpen)}
                 />
               </Tooltip>
-              <Tooltip text="Draw">
+              <Tooltip text="Pen">
                 <img
                   className={
                     "canvas-tool" +
@@ -112,7 +118,7 @@ function Canvas(props: CanvasProps) {
                   onClick={setDrawToolMode}
                 />
               </Tooltip>
-              <Tooltip text="Erase">
+              <Tooltip text="Eraser">
                 <img
                   className={
                     "canvas-tool" +
@@ -122,6 +128,7 @@ function Canvas(props: CanvasProps) {
                   onClick={setEraseToolMode}
                 />
               </Tooltip>
+              <div className="separator" />
               <Tooltip text="Undo">
                 <img
                   className="canvas-tool"

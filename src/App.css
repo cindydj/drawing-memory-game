@@ -24,4 +24,20 @@
     gap: 15px;
     padding-bottom: 20px;
   }
+
+  .completion-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+
+    &.hidden {
+      visibility: hidden;
+    }
+
+    .thanks {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
 }
