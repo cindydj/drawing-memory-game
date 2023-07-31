@@ -108,7 +108,8 @@ function Canvas(props: CanvasProps) {
                   onClick={(): void => setIsColorPickerOpen(!isColorPickerOpen)}
                 />
               </Tooltip>
-              <Tooltip text="Pen">
+              {/* There is a bug where eraser marks persist across all canvases, so removing ability to erase for now. */}
+              {/* <Tooltip text="Pen">
                 <img
                   className={
                     "canvas-tool" +
@@ -128,7 +129,7 @@ function Canvas(props: CanvasProps) {
                   onClick={setEraseToolMode}
                 />
               </Tooltip>
-              <div className="separator" />
+              <div className="separator" /> */}
               <Tooltip text="Undo">
                 <img
                   className="canvas-tool"
