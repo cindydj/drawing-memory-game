@@ -2,7 +2,10 @@ import React, { useMemo, useState } from "react";
 
 import "./App.css";
 import SinglePrompt from "./SinglePrompt/SinglePrompt";
+import CHEEMS_HMM_EMOJI from "./images/prompts/cheems_hmm.png";
+import NERVOUS_LOOK_EMOJI from "./images/prompts/nervous_look.png";
 import PITCHFORK_EMOJI from "./images/prompts/pitchfork.png";
+import THONKING_EMOJI from "./images/prompts/thonking.png";
 import Button from "./components/Button/Button";
 import JSZip from "jszip";
 import FileSaver from "file-saver";
@@ -10,9 +13,9 @@ import FileSaver from "file-saver";
 // Update this value to add or update emoji prompts.
 const EMOJI_PROMPTS_TO_SOURCE: { [promptName: string]: string } = {
   ":pitchforks:": PITCHFORK_EMOJI,
-  ":thonking:": "",
-  ":cheems_hmm:": "",
-  ":nervous_look:": "",
+  ":thonking:": THONKING_EMOJI,
+  ":cheems_hmm:": CHEEMS_HMM_EMOJI,
+  ":nervous_look:": NERVOUS_LOOK_EMOJI,
 };
 
 function App() {
