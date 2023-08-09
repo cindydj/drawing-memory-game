@@ -2,52 +2,12 @@ import React, { useMemo, useState } from "react";
 
 import "./App.css";
 import SinglePrompt from "./SinglePrompt/SinglePrompt";
-import CHEEMS_HMM_EMOJI from "./images/prompts/cheems_hmm.png";
-import NERVOUS_LOOK_EMOJI from "./images/prompts/nervous_look.png";
-import PITCHFORK_EMOJI from "./images/prompts/pitchfork.png";
-import THONKING_EMOJI from "./images/prompts/thonking.png";
 import Button from "./components/Button/Button";
 import JSZip from "jszip";
 import FileSaver from "file-saver";
+import { EMOJI_PROMPT_INFO } from "./data/emoji_prompts";
 
-// Update this value to add or update emoji prompts.
-const EMOJI_PROMPT_INFO: {
-  [promptName: string]: { source: string; colors: string[] };
-} = {
-  ":pitchforks:": {
-    source: PITCHFORK_EMOJI,
-    colors: [
-      "#000000", // black
-      "#5B0000", // brown
-      "#FFFFFF", // white
-    ],
-  },
-  ":thonking:": {
-    source: THONKING_EMOJI,
-    colors: [
-      "#FFCC4D", // yellow-ish
-      "#F4900B", // orange
-      "#664500", // dark brown
-    ],
-  },
-  ":cheems_hmm:": {
-    source: CHEEMS_HMM_EMOJI,
-    colors: [
-      "#B97B2C", // dark tan
-      "#DEC098", // tan
-      "#000000", // black
-    ],
-  },
-  ":nervous_look:": {
-    source: NERVOUS_LOOK_EMOJI,
-    colors: [
-      "#8F1201", // brownish-red
-      "#D3781B", // tan
-      "#000000", // black
-      "#FFFFFF", // white
-    ],
-  },
-};
+// NOTE: Update data/* in order to update prompts or colors.
 
 function App() {
   const [promptNameToCanvasRef, setPromptNameToCanvasRef] = useState<{
@@ -86,7 +46,7 @@ function App() {
     );
     zip
       .generateAsync({ type: "blob" })
-      .then((blob) => FileSaver.saveAs(blob, "emoji_memory_game.zip"));
+      .then((blob) => FileSaver.saveAs(blob, "drawing_memory_game.zip"));
   };
 
   return (

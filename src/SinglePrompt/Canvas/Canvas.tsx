@@ -59,18 +59,30 @@ function Canvas(props: CanvasProps) {
   const setEraseToolMode = (): void => {
     canvasRef.current.eraseMode(true);
     setCurrentTool(ToolType.ERASE);
+    if (isColorPickerOpen) {
+      setIsColorPickerOpen(false);
+    }
   };
 
   const undoEdit = (): void => {
     canvasRef.current.undo();
+    if (isColorPickerOpen) {
+      setIsColorPickerOpen(false);
+    }
   };
 
   const redoEdit = (): void => {
     canvasRef.current.redo();
+    if (isColorPickerOpen) {
+      setIsColorPickerOpen(false);
+    }
   };
 
   const clearCanvas = (): void => {
     canvasRef.current.clearCanvas();
+    if (isColorPickerOpen) {
+      setIsColorPickerOpen(false);
+    }
   };
 
   const downloadImage = async (): Promise<void> => {
@@ -114,6 +126,9 @@ function Canvas(props: CanvasProps) {
                   onClick={(): void => {
                     setCurrentColorHex(colorHex);
                     setDrawToolMode();
+                    if (isColorPickerOpen) {
+                      setIsColorPickerOpen(false);
+                    }
                   }}
                 />
               ))}
@@ -128,7 +143,7 @@ function Canvas(props: CanvasProps) {
                   />
                 ) : (
                   <div
-                    className="more-color-picker selected"
+                    className="more-color-picker"
                     id="more-color-picker"
                     style={{ backgroundColor: currentColorHex }}
                     onClick={(): void =>
