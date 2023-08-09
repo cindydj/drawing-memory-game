@@ -1,3 +1,4 @@
+import APPLIED_EMOJI from "../images/prompts/emojis/applied.svg";
 import CHEEMS_HMM_EMOJI from "../images/prompts/emojis/cheems_hmm.png";
 import NERVOUS_LOOK_EMOJI from "../images/prompts/emojis/nervous_look.png";
 import PITCHFORK_EMOJI from "../images/prompts/emojis/pitchfork.png";
@@ -37,6 +38,13 @@ export const EMOJI_PROMPT_INFO: {
       "#8F1201", // brownish-red
       "#D3781B", // tan
       "#000000", // black
+      "#FFFFFF", // white
+    ],
+  },
+  ":applied:": {
+    source: APPLIED_EMOJI,
+    colors: [
+      "#1070FC", // blue
       "#FFFFFF", // white
     ],
   },
