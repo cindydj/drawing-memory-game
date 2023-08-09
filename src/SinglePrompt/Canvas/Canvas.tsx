@@ -103,7 +103,7 @@ function Canvas(props: CanvasProps) {
             svgStyle={svgStyles}
             width={CANVAS_WIDTH}
             height={CANVAS_HEIGHT}
-            strokeWidth={4}
+            strokeWidth={10}
             strokeColor={currentColorHex}
           />
         </div>
