@@ -132,26 +132,39 @@ function Canvas(props: CanvasProps) {
                   }}
                 />
               ))}
-              <Tooltip text="Change color">
-                {colors.includes(currentColorHex) ? (
-                  <img
-                    className="more-color-picker"
-                    src={ADD_PATH}
-                    onClick={(): void =>
-                      setIsColorPickerOpen(!isColorPickerOpen)
-                    }
-                  />
-                ) : (
-                  <div
-                    className="more-color-picker"
-                    id="more-color-picker"
-                    style={{ backgroundColor: currentColorHex }}
-                    onClick={(): void =>
-                      setIsColorPickerOpen(!isColorPickerOpen)
-                    }
-                  />
+              <div className="more-color-picker-wrapper">
+                <Tooltip text="Change color">
+                  {colors.includes(currentColorHex) ? (
+                    <img
+                      className="more-color-picker"
+                      src={ADD_PATH}
+                      onClick={(): void =>
+                        setIsColorPickerOpen(!isColorPickerOpen)
+                      }
+                    />
+                  ) : (
+                    <div
+                      className="more-color-picker"
+                      id="more-color-picker"
+                      style={{ backgroundColor: currentColorHex }}
+                      onClick={(): void =>
+                        setIsColorPickerOpen(!isColorPickerOpen)
+                      }
+                    />
+                  )}
+                </Tooltip>
+                {isColorPickerOpen && (
+                  <div className="color-picker-tooltip">
+                    <SketchPicker
+                      color={currentColorHex}
+                      onChangeComplete={({ hex }) => {
+                        setCurrentColorHex(hex);
+                        setDrawToolMode();
+                      }}
+                    />
+                  </div>
                 )}
-              </Tooltip>
+              </div>
               {/* There is a bug where eraser marks persist across all canvases, so removing ability to erase for now. */}
               {/* <Tooltip text="Eraser">
                 <img
@@ -185,17 +198,6 @@ function Canvas(props: CanvasProps) {
                   onClick={clearCanvas}
                 />
               </Tooltip>
-              {isColorPickerOpen && (
-                <div className="color-picker-tooltip">
-                  <SketchPicker
-                    color={currentColorHex}
-                    onChangeComplete={({ hex }) => {
-                      setCurrentColorHex(hex);
-                      setDrawToolMode();
-                    }}
-                  />
-                </div>
-              )}
             </div>
           </>
         )}

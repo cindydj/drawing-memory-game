@@ -16,7 +16,6 @@
       flex-direction: row;
       gap: 8px;
       padding: 8px;
-      position: relative;
 
       .separator {
         border-right: 1px #9c9c9c solid;
@@ -28,6 +27,7 @@
         border-radius: 50%;
         cursor: pointer;
         height: 20px;
+        margin: 2px;
         transition: all .25s ease;
         width: 20px;
 
@@ -41,6 +41,7 @@
         &.selected {
           width: 24px;
           height: 24px;
+          margin: 0px;
 
           &.is-white {
             /* Make a smaller circle so that the width and height don't change when border is added. */
@@ -50,20 +51,25 @@
         }
       }
 
-      .more-color-picker {
-        border-radius: 50%;
-        cursor: pointer;
-        height: 24px;
-        width: 24px;
+      .more-color-picker-wrapper {
+        display: flex;
+        position: relative;
 
-        &:hover {
-          background-color: #E8F1FE;
+        .more-color-picker {
+          border-radius: 50%;
+          cursor: pointer;
+          height: 24px;
+          width: 24px;
+
+          &:hover {
+            background-color: #E8F1FE;
+          }
         }
-      }
 
-      .color-picker-tooltip {
-        position: absolute;
-        bottom: 36px;
+        .color-picker-tooltip {
+          position: absolute;
+          bottom: 28px;
+        }
       }
     
       .canvas-tool {

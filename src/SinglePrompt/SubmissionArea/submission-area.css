@@ -8,4 +8,9 @@
   justify-content: center;
   /* Width of the canvas. */
   width: 300px;
+
+  .golden-image {
+    max-width: 70%;
+    max-height: 70%;
+  }
 }

@@ -16,7 +16,7 @@ function SubmissionArea(props: SubmissionAreaProps) {
   return (
     <div className="submission-area">
       {isPromptSubmitted ? (
-        <img className="canvas-tool" src={source} />
+        <img className="golden-image" src={source} />
       ) : (
         <Button onClick={setIsPromptSubmitted}>Submit</Button>
       )}

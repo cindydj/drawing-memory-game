@@ -1,7 +1,7 @@
-import CHEEMS_HMM_EMOJI from "../images/prompts/cheems_hmm.png";
-import NERVOUS_LOOK_EMOJI from "../images/prompts/nervous_look.png";
-import PITCHFORK_EMOJI from "../images/prompts/pitchfork.png";
-import THONKING_EMOJI from "../images/prompts/thonking.png";
+import CHEEMS_HMM_EMOJI from "../images/prompts/emojis/cheems_hmm.png";
+import NERVOUS_LOOK_EMOJI from "../images/prompts/emojis/nervous_look.png";
+import PITCHFORK_EMOJI from "../images/prompts/emojis/pitchfork.png";
+import THONKING_EMOJI from "../images/prompts/emojis/thonking.png";
 
 // Update this value to add or update emoji prompts.
 export const EMOJI_PROMPT_INFO: {
