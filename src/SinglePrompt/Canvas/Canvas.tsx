@@ -3,10 +3,10 @@ import { ReactSketchCanvas } from "react-sketch-canvas";
 import { SketchPicker } from "react-color";
 
 import Tooltip from "../../components/Tooltip/Tooltip";
+import ADD_PATH from "../../images/add.svg";
 import DELETE_PATH from "../../images/delete.svg";
 import DOWNLOAD_PATH from "../../images/download.svg";
 import ERASER_PATH from "../../images/eraser.svg";
-import PAINT_BRUSH_PATH from "../../images/paint_brush.svg";
 import UNDO_PATH from "../../images/undo.svg";
 import REDO_PATH from "../../images/redo.svg";
 
@@ -14,14 +14,10 @@ import "./canvas.css";
 
 const CANVAS_WIDTH = "300px";
 const CANVAS_HEIGHT = "300px";
-const DEFAULT_DRAWING_COLOR = "#000000";
 
 enum ToolType {
   DRAW,
   ERASE,
-  UNDO,
-  REDO,
-  CLEAR,
 }
 
 const styles = {
@@ -35,16 +31,18 @@ const svgStyles = {
 
 interface CanvasProps {
   name: string;
+  /* Default colors to make available, in hex. */
+  colors: string[];
   disabled?: boolean;
   /* Callback called upon initializing canvas. */
   addCanvasRefCb: (promptName: string, canvasRef: any) => void;
 }
 
 function Canvas(props: CanvasProps) {
-  const { name, disabled, addCanvasRefCb } = props;
+  const { name, colors, disabled, addCanvasRefCb } = props;
 
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
-  const [currentColorHex, setCurrentColorHex] = useState(DEFAULT_DRAWING_COLOR);
+  const [currentColorHex, setCurrentColorHex] = useState(colors[0]);
   const [currentTool, setCurrentTool] = useState<ToolType>(ToolType.DRAW);
   const canvasRef = useRef<any>();
 
@@ -100,26 +98,47 @@ function Canvas(props: CanvasProps) {
         {!disabled && (
           <>
             <div className="drawing-controls">
-              <Tooltip text="Change color">
+              {colors.map((colorHex) => (
                 <div
-                  className="more-color-picker"
-                  id="more-color-picker"
-                  style={{ backgroundColor: currentColorHex }}
-                  onClick={(): void => setIsColorPickerOpen(!isColorPickerOpen)}
+                  className={
+                    "single-color-picker" +
+                    (colorHex.toLowerCase().endsWith("ffffff")
+                      ? " is-white"
+                      : "") +
+                    (colorHex === currentColorHex ? " selected" : "")
+                  }
+                  id={`${name}_${colorHex}`}
+                  style={{
+                    backgroundColor: colorHex,
+                  }}
+                  onClick={(): void => {
+                    setCurrentColorHex(colorHex);
+                    setDrawToolMode();
+                  }}
                 />
+              ))}
+              <Tooltip text="Change color">
+                {colors.includes(currentColorHex) ? (
+                  <img
+                    className="more-color-picker"
+                    src={ADD_PATH}
+                    onClick={(): void =>
+                      setIsColorPickerOpen(!isColorPickerOpen)
+                    }
+                  />
+                ) : (
+                  <div
+                    className="more-color-picker selected"
+                    id="more-color-picker"
+                    style={{ backgroundColor: currentColorHex }}
+                    onClick={(): void =>
+                      setIsColorPickerOpen(!isColorPickerOpen)
+                    }
+                  />
+                )}
               </Tooltip>
               {/* There is a bug where eraser marks persist across all canvases, so removing ability to erase for now. */}
-              {/* <Tooltip text="Pen">
-                <img
-                  className={
-                    "canvas-tool" +
-                    (currentTool === ToolType.DRAW ? " selected" : "")
-                  }
-                  src={PAINT_BRUSH_PATH}
-                  onClick={setDrawToolMode}
-                />
-              </Tooltip>
-              <Tooltip text="Eraser">
+              {/* <Tooltip text="Eraser">
                 <img
                   className={
                     "canvas-tool" +
@@ -128,8 +147,8 @@ function Canvas(props: CanvasProps) {
                   src={ERASER_PATH}
                   onClick={setEraseToolMode}
                 />
-              </Tooltip>
-              <div className="separator" /> */}
+              </Tooltip> */}
+              <div className="separator" />
               <Tooltip text="Undo">
                 <img
                   className="canvas-tool"
@@ -151,17 +170,18 @@ function Canvas(props: CanvasProps) {
                   onClick={clearCanvas}
                 />
               </Tooltip>
+              {isColorPickerOpen && (
+                <div className="color-picker-tooltip">
+                  <SketchPicker
+                    color={currentColorHex}
+                    onChangeComplete={({ hex }) => {
+                      setCurrentColorHex(hex);
+                      setDrawToolMode();
+                    }}
+                  />
+                </div>
+              )}
             </div>
-            {isColorPickerOpen && (
-              <SketchPicker
-                color={currentColorHex}
-                onChangeComplete={({ hex }) => {
-                  console.log(hex);
-                  setCurrentColorHex(hex);
-                  setDrawToolMode();
-                }}
-              />
-            )}
           </>
         )}
         {disabled && (

@@ -10,6 +10,8 @@ interface SinglePromptProps {
   name: string;
   /* Ground truth image source. */
   source: string;
+  /* Default colors to make available, in hex. */
+  colors: string[];
   /* Callback called upon initializing canvas. */
   addCanvasRefCb: (promptName: string, canvasRef: any) => void;
   /* Callback called after submitting prompt. */
@@ -17,7 +19,7 @@ interface SinglePromptProps {
 }
 
 function SinglePrompt(props: SinglePromptProps) {
-  const { name, source, addCanvasRefCb, submitPromptCb } = props;
+  const { name, source, colors, addCanvasRefCb, submitPromptCb } = props;
 
   const [isPromptSubmitted, setIsPromptSubmitted] = useState(false);
 
@@ -27,6 +29,7 @@ function SinglePrompt(props: SinglePromptProps) {
       <div className="canvas-and-comparison">
         <Canvas
           name={name}
+          colors={colors}
           disabled={isPromptSubmitted}
           addCanvasRefCb={addCanvasRefCb}
         />

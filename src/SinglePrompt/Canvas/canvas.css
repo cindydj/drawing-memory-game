@@ -16,6 +16,7 @@
       flex-direction: row;
       gap: 8px;
       padding: 8px;
+      position: relative;
 
       .separator {
         border-right: 1px #9c9c9c solid;
@@ -23,11 +24,51 @@
         margin: 0px 5px;
       }
 
+      .single-color-picker {
+        border-radius: 50%;
+        cursor: pointer;
+        height: 20px;
+        transition: all .25s ease;
+        width: 20px;
+
+        &.is-white {
+          border: 1px black solid;
+          /* Make a smaller circle so that the width and height don't change when border is added. */
+          height: 18px;
+          width: 18px;
+        }
+
+        &.selected {
+          width: 24px;
+          height: 24px;
+
+          &.is-white {
+            /* Make a smaller circle so that the width and height don't change when border is added. */
+            height: 22px;
+            width: 22px;
+          }
+        }
+      }
+
       .more-color-picker {
         border-radius: 50%;
         cursor: pointer;
-        height: 24px;
-        width: 24px;
+        height: 20px;
+        width: 20px;
+
+        &:hover {
+          background-color: #D3E5F9;
+        }
+
+        &.selected {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .color-picker-tooltip {
+        position: absolute;
+        bottom: 36px;
       }
     
       .canvas-tool {

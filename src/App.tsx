@@ -11,11 +11,42 @@ import JSZip from "jszip";
 import FileSaver from "file-saver";
 
 // Update this value to add or update emoji prompts.
-const EMOJI_PROMPTS_TO_SOURCE: { [promptName: string]: string } = {
-  ":pitchforks:": PITCHFORK_EMOJI,
-  ":thonking:": THONKING_EMOJI,
-  ":cheems_hmm:": CHEEMS_HMM_EMOJI,
-  ":nervous_look:": NERVOUS_LOOK_EMOJI,
+const EMOJI_PROMPT_INFO: {
+  [promptName: string]: { source: string; colors: string[] };
+} = {
+  ":pitchforks:": {
+    source: PITCHFORK_EMOJI,
+    colors: [
+      "#000000", // black
+      "#5B0000", // brown
+      "#FFFFFF", // white
+    ],
+  },
+  ":thonking:": {
+    source: THONKING_EMOJI,
+    colors: [
+      "#FFCC4D", // yellow-ish
+      "#F4900B", // orange
+      "#664500", // dark brown
+    ],
+  },
+  ":cheems_hmm:": {
+    source: CHEEMS_HMM_EMOJI,
+    colors: [
+      "#B97B2C", // dark tan
+      "#DEC098", // tan
+      "#000000", // black
+    ],
+  },
+  ":nervous_look:": {
+    source: NERVOUS_LOOK_EMOJI,
+    colors: [
+      "#8F1201", // brownish-red
+      "#D3781B", // tan
+      "#000000", // black
+      "#FFFFFF", // white
+    ],
+  },
 };
 
 function App() {
@@ -35,7 +66,7 @@ function App() {
   };
 
   const areAllPromptsSubmitted = useMemo((): boolean => {
-    return numSubmittedPrompts === Object.keys(EMOJI_PROMPTS_TO_SOURCE).length;
+    return numSubmittedPrompts === Object.keys(EMOJI_PROMPT_INFO).length;
   }, [numSubmittedPrompts]);
 
   const downloadAllImages = async (): Promise<void> => {
@@ -67,12 +98,13 @@ function App() {
         </div>
       </div>
       <div className="prompt-list">
-        {Object.entries(EMOJI_PROMPTS_TO_SOURCE).map(
-          ([promptName, source]): JSX.Element => (
+        {Object.entries(EMOJI_PROMPT_INFO).map(
+          ([promptName, info]): JSX.Element => (
             <SinglePrompt
               key={promptName}
               name={promptName}
-              source={source}
+              source={info.source}
+              colors={info.colors}
               addCanvasRefCb={addCanvasRef}
               submitPromptCb={incrementSubmittedPrompts}
             />
