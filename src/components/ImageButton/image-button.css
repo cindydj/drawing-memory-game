@@ -1,7 +1,8 @@
 .image-button-style {
   align-items: center;
-  border: 2px #9c9c9c solid;
-  border-radius: 4px;
+  background-color: #D3E5F9;
+  border-radius: 8px;
+  box-shadow: -5px 5px 5px #9c9c9c;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@
   width: 300px;
 
   &:hover {
-    box-shadow: -5px 5px 10px #9c9c9c;
+    box-shadow: -5px 5px 15px #9c9c9c;
     transform: scale(1.01)
   }
 
