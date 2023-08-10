@@ -2,13 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
 import { SketchPicker } from "react-color";
 
-import Tooltip from "../../components/Tooltip/Tooltip";
-import ADD_PATH from "../../images/add.svg";
-import DELETE_PATH from "../../images/delete.svg";
-import DOWNLOAD_PATH from "../../images/download.svg";
-import ERASER_PATH from "../../images/eraser.svg";
-import UNDO_PATH from "../../images/undo.svg";
-import REDO_PATH from "../../images/redo.svg";
+import Tooltip from "../../../components/Tooltip/Tooltip";
+import ADD_PATH from "../../../images/add.svg";
+import DELETE_PATH from "../../../images/delete.svg";
+import DOWNLOAD_PATH from "../../../images/download.svg";
+import ERASER_PATH from "../../../images/eraser.svg";
+import UNDO_PATH from "../../../images/undo.svg";
+import REDO_PATH from "../../../images/redo.svg";
 
 import "./canvas.css";
 

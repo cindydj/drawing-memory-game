@@ -1,5 +1,5 @@
 body {
-  background-color: #D3E5F9;
+  background-color: #F1F2F4;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,4 +18,10 @@ html, #root {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.error-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

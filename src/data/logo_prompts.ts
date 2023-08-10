@@ -6,7 +6,7 @@ import PORSCHE_LOGO from "../images/prompts/automotive_logos/porsche.png";
 import TOYOTA_LOGO from "../images/prompts/automotive_logos/toyota.png";
 import VOLKSWAGEN_LOGO from "../images/prompts/automotive_logos/volkswagen.png";
 
-// Update this value to add or update emoji prompts.
+// Update this value to add or update automotive logo prompts.
 export const AUTOMOTIVE_LOGO_PROMPT_INFO: {
   [promptName: string]: { source: string; colors: string[] };
 } = {

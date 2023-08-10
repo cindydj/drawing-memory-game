@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./submission-area.css";
-import Button from "../../components/Button/Button";
+import Button from "../../../components/Button/Button";
 
 interface SubmissionAreaProps {
   source: string;

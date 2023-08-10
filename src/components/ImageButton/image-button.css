@@ -1,0 +1,27 @@
+.image-button-style {
+  align-items: center;
+  border: 2px #9c9c9c solid;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 24px;
+  gap: 20px;
+  height: 300px;
+  justify-content: center;
+  margin: 5px;
+  padding: 20px;
+  transition: all .2s ease;
+  width: 300px;
+
+  &:hover {
+    box-shadow: -5px 5px 10px #9c9c9c;
+    transform: scale(1.01)
+  }
+
+  .button-image {
+    max-height: 70%;
+    max-width: 70%;
+  }
+}

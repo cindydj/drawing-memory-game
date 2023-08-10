@@ -1,43 +1,23 @@
 .App {
+}
+
+.page {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
   text-align: center;
   width: 100%;
+}
 
-  .title {
-    font-size: 32px;
-    font-weight: 500;
-    padding: 20px;
+.page-title {
+  font-size: 32px;
+  font-weight: 500;
+  padding: 20px;
 
-    .subtitle {
-      font-size: 18px;
-      font-weight: 300;
-      padding-top: 5px;
-    }
-  }
-
-  .prompt-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-bottom: 20px;
-  }
-
-  .completion-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 30px;
-
-    &.hidden {
-      visibility: hidden;
-    }
-
-    .thanks {
-      font-size: 24px;
-      font-weight: 500;
-    }
+  .page-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 5px;
   }
 }

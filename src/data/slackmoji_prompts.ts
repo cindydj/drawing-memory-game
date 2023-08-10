@@ -1,15 +1,15 @@
-import APPLIED_EMOJI from "../images/prompts/emojis/applied.svg";
-import CHEEMS_HMM_EMOJI from "../images/prompts/emojis/cheems_hmm.png";
-import NERVOUS_LOOK_EMOJI from "../images/prompts/emojis/nervous_look.png";
-import PITCHFORK_EMOJI from "../images/prompts/emojis/pitchfork.png";
-import THONKING_EMOJI from "../images/prompts/emojis/thonking.png";
+import APPLIED_SLACKMOJI from "../images/prompts/slackmojis/applied.svg";
+import CHEEMS_HMM_SLACKMOJI from "../images/prompts/slackmojis/cheems_hmm.png";
+import NERVOUS_LOOK_SLACKMOJI from "../images/prompts/slackmojis/nervous_look.png";
+import PITCHFORK_SLACKMOJI from "../images/prompts/slackmojis/pitchfork.png";
+import THONKING_SLACKMOJI from "../images/prompts/slackmojis/thonking.png";
 
-// Update this value to add or update emoji prompts.
-export const EMOJI_PROMPT_INFO: {
+// Update this value to add or update slackmoji prompts.
+export const SLACKMOJI_PROMPT_INFO: {
   [promptName: string]: { source: string; colors: string[] };
 } = {
   ":pitchforks:": {
-    source: PITCHFORK_EMOJI,
+    source: PITCHFORK_SLACKMOJI,
     colors: [
       "#000000", // black
       "#5B0000", // brown
@@ -17,7 +17,7 @@ export const EMOJI_PROMPT_INFO: {
     ],
   },
   ":thonking:": {
-    source: THONKING_EMOJI,
+    source: THONKING_SLACKMOJI,
     colors: [
       "#FFCC4D", // yellow-ish
       "#F4900B", // orange
@@ -25,7 +25,7 @@ export const EMOJI_PROMPT_INFO: {
     ],
   },
   ":cheems_hmm:": {
-    source: CHEEMS_HMM_EMOJI,
+    source: CHEEMS_HMM_SLACKMOJI,
     colors: [
       "#B97B2C", // dark tan
       "#DEC098", // tan
@@ -33,7 +33,7 @@ export const EMOJI_PROMPT_INFO: {
     ],
   },
   ":nervous_look:": {
-    source: NERVOUS_LOOK_EMOJI,
+    source: NERVOUS_LOOK_SLACKMOJI,
     colors: [
       "#8F1201", // brownish-red
       "#D3781B", // tan
@@ -42,7 +42,7 @@ export const EMOJI_PROMPT_INFO: {
     ],
   },
   ":applied:": {
-    source: APPLIED_EMOJI,
+    source: APPLIED_SLACKMOJI,
     colors: [
       "#1070FC", // blue
       "#FFFFFF", // white
