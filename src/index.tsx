@@ -1,19 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import GamePage from "./DrawingMemoryGame/GamePage/GamePage";
+import LandingPage from "./DrawingMemoryGame/LandingPage/LandingPage";
+import { AUTOMOTIVE_LOGO_PROMPT_INFO } from "./data/logo_prompts";
+import { SLACKMOJI_PROMPT_INFO } from "./data/slackmoji_prompts";
+
+import "./index.css";
+import { convertTopicToPath, TOPICS } from "./DrawingMemoryGame/topics";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <LandingPage />,
     errorElement: (
       <div id="error-page" className="error-page">
         <h1>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
       </div>
+    ),
+  },
+  {
+    path: convertTopicToPath(TOPICS.slackmojis),
+    element: (
+      <GamePage name={TOPICS.slackmojis} promptInfo={SLACKMOJI_PROMPT_INFO} />
+    ),
+  },
+  {
+    path: convertTopicToPath(TOPICS.carLogos),
+    element: (
+      <GamePage
+        name={TOPICS.carLogos}
+        promptInfo={AUTOMOTIVE_LOGO_PROMPT_INFO}
+      />
     ),
   },
 ]);

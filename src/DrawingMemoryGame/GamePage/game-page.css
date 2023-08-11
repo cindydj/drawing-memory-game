@@ -1,5 +1,21 @@
 .game-page {
 
+  .back-button {
+    border-radius: 50%;
+    height: 30px;
+    left: 0px;
+    margin: 15px;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    width: 30px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #B7D4F5;
+    }
+  }
+
   .prompt-list {
     display: flex;
     flex-direction: column;

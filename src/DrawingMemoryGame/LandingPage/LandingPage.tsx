@@ -4,8 +4,12 @@ import "./landing-page.css";
 import ImageButton from "../../components/ImageButton/ImageButton";
 import SLACKMOJI_LOGO from "../../images/meow_painter.png";
 import CAR_LOGO from "../../images/car.png";
+import { useNavigate } from "react-router-dom";
+import { TOPICS, convertTopicToPath } from "../topics";
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="page landing-page">
       <div className="page-title">
@@ -16,17 +20,17 @@ function LandingPage() {
       </div>
       <div className="topic-buttons">
         <ImageButton
-          text="Slackmojis"
+          text={`${TOPICS.slackmojis}s`}
           imageSource={SLACKMOJI_LOGO}
           onClick={() => {
-            console.log("Slackmojis!");
+            navigate(convertTopicToPath(TOPICS.slackmojis));
           }}
         />
         <ImageButton
-          text="Car logos"
+          text={`${TOPICS.carLogos}s`}
           imageSource={CAR_LOGO}
           onClick={() => {
-            console.log("Car logos!");
+            navigate(convertTopicToPath(TOPICS.carLogos));
           }}
         />
       </div>

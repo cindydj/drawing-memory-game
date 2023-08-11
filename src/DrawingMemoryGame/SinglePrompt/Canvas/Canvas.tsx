@@ -3,12 +3,12 @@ import { ReactSketchCanvas } from "react-sketch-canvas";
 import { SketchPicker } from "react-color";
 
 import Tooltip from "../../../components/Tooltip/Tooltip";
-import ADD_PATH from "../../../images/add.svg";
-import DELETE_PATH from "../../../images/delete.svg";
-import DOWNLOAD_PATH from "../../../images/download.svg";
-import ERASER_PATH from "../../../images/eraser.svg";
-import UNDO_PATH from "../../../images/undo.svg";
-import REDO_PATH from "../../../images/redo.svg";
+import { ReactComponent as AddIcon } from "../../../images/add.svg";
+import { ReactComponent as DeleteIcon } from "../../../images/delete.svg";
+import { ReactComponent as DownloadIcon } from "../../../images/download.svg";
+import { ReactComponent as EraserIcon } from "../../../images/eraser.svg";
+import { ReactComponent as UndoIcon } from "../../../images/undo.svg";
+import { ReactComponent as RedoIcon } from "../../../images/redo.svg";
 
 import "./canvas.css";
 
@@ -135,9 +135,8 @@ function Canvas(props: CanvasProps) {
               <div className="more-color-picker-wrapper">
                 <Tooltip text="Change color">
                   {colors.includes(currentColorHex) ? (
-                    <img
+                    <AddIcon
                       className="more-color-picker"
-                      src={ADD_PATH}
                       onClick={(): void =>
                         setIsColorPickerOpen(!isColorPickerOpen)
                       }
@@ -178,25 +177,13 @@ function Canvas(props: CanvasProps) {
               </Tooltip> */}
               <div className="separator" />
               <Tooltip text="Undo">
-                <img
-                  className="canvas-tool"
-                  src={UNDO_PATH}
-                  onClick={undoEdit}
-                />
+                <UndoIcon className="canvas-tool" onClick={undoEdit} />
               </Tooltip>
               <Tooltip text="Redo">
-                <img
-                  className="canvas-tool"
-                  src={REDO_PATH}
-                  onClick={redoEdit}
-                />
+                <RedoIcon className="canvas-tool" onClick={redoEdit} />
               </Tooltip>
               <Tooltip text="Clear">
-                <img
-                  className="canvas-tool"
-                  src={DELETE_PATH}
-                  onClick={clearCanvas}
-                />
+                <DeleteIcon className="canvas-tool" onClick={clearCanvas} />
               </Tooltip>
             </div>
           </>
@@ -204,11 +191,7 @@ function Canvas(props: CanvasProps) {
         {disabled && (
           <div className="drawing-controls">
             <Tooltip text="Save as PNG">
-              <img
-                className="canvas-tool"
-                src={DOWNLOAD_PATH}
-                onClick={downloadImage}
-              />
+              <DownloadIcon className="canvas-tool" onClick={downloadImage} />
             </Tooltip>
           </div>
         )}

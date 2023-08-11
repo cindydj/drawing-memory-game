@@ -4,19 +4,24 @@ import SinglePrompt from "../SinglePrompt/SinglePrompt";
 import Button from "../../components/Button/Button";
 import JSZip from "jszip";
 import FileSaver from "file-saver";
+import { ReactComponent as BackButton } from "../../images/back_arrow.svg";
 
 import "./game-page.css";
+import { useNavigate } from "react-router-dom";
 
 interface GamePageProps {
+  name: string;
   promptInfo: { [promptName: string]: { source: string; colors: string[] } };
 }
 
 function GamePage(props: GamePageProps) {
-  const { promptInfo } = props;
+  const { name, promptInfo } = props;
   const [promptNameToCanvasRef, setPromptNameToCanvasRef] = useState<{
     [promptName: string]: any;
   }>({});
   const [numSubmittedPrompts, setNumSubmittedPrompts] = useState(0);
+
+  const navigate = useNavigate();
 
   const addCanvasRef = (promptName: string, canvasRef: any): void => {
     const newpromptNameToCanvasRef = promptNameToCanvasRef;
@@ -54,10 +59,11 @@ function GamePage(props: GamePageProps) {
 
   return (
     <div className="page game-page">
+      <BackButton className="back-button" onClick={() => navigate("/")} />
       <div className="page-title">
-        Slackmoji Memory Game
+        {name} Memory Game
         <div className="page-subtitle">
-          Can you draw the slackmojis below from memory?
+          Can you draw the {name.toLowerCase()}s below from memory?
         </div>
       </div>
       <div className="prompt-list">
