@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import GamePage from "./DrawingMemoryGame/GamePage/GamePage";
 import LandingPage from "./DrawingMemoryGame/LandingPage/LandingPage";
-import { CAR_LOGO_PROMPT_INFO } from "./data/logo_prompts";
+import { CAR_COMPANY_LOGO_PROMPT_INFO } from "./data/logo_prompts";
 import { SLACKMOJI_PROMPT_INFO } from "./data/slackmoji_prompts";
 
 import "./index.css";
@@ -29,9 +29,12 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: convertTopicToPath(TOPICS.carLogos),
+    path: convertTopicToPath(TOPICS.carCompanyLogos),
     element: (
-      <GamePage name={TOPICS.carLogos} promptInfo={CAR_LOGO_PROMPT_INFO} />
+      <GamePage
+        name={TOPICS.carCompanyLogos}
+        promptInfo={CAR_COMPANY_LOGO_PROMPT_INFO}
+      />
     ),
   },
 ]);

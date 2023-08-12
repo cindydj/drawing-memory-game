@@ -1,6 +1,6 @@
 export const TOPICS = {
   slackmojis: "Slackmoji",
-  carLogos: "Car Logo",
+  carCompanyLogos: "Car Company Logo",
 };
 
 export const convertTopicToPath = (topicName: string): string => {

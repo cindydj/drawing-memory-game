@@ -14,7 +14,7 @@ function ImageButton(props: ImageButtonProps) {
   return (
     <div className="image-button-style" onClick={onClick}>
       <img className="button-image" src={imageSource} />
-      {text}
+      <div className="button-text">{text}</div>
     </div>
   );
 }

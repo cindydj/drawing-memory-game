@@ -1,16 +1,16 @@
-import BMW_LOGO from "../images/prompts/car_logos/bmw.png";
-import GATIK_LOGO from "../images/prompts/car_logos/gatik.png";
-import GENERAL_MOTORS_LOGO from "../images/prompts/car_logos/general_motors.png";
-import KODIAK_LOGO from "../images/prompts/car_logos/kodiak.png";
-import MERCEDES_BENZ_LOGO from "../images/prompts/car_logos/mercedes_benz.png";
-import MOTIONAL_LOGO from "../images/prompts/car_logos/motional.png";
-import PORSCHE_LOGO from "../images/prompts/car_logos/porsche.png";
-import TESLA_LOGO from "../images/prompts/car_logos/tesla.png";
-import TOYOTA_LOGO from "../images/prompts/car_logos/toyota.png";
-import VOLKSWAGEN_LOGO from "../images/prompts/car_logos/volkswagen.png";
+import BMW_LOGO from "../images/prompts/car_company_logos/bmw.png";
+import GATIK_LOGO from "../images/prompts/car_company_logos/gatik.png";
+import GENERAL_MOTORS_LOGO from "../images/prompts/car_company_logos/general_motors.png";
+import KODIAK_LOGO from "../images/prompts/car_company_logos/kodiak.png";
+import MERCEDES_BENZ_LOGO from "../images/prompts/car_company_logos/mercedes_benz.png";
+import MOTIONAL_LOGO from "../images/prompts/car_company_logos/motional.png";
+import PORSCHE_LOGO from "../images/prompts/car_company_logos/porsche.png";
+import TESLA_LOGO from "../images/prompts/car_company_logos/tesla.png";
+import TOYOTA_LOGO from "../images/prompts/car_company_logos/toyota.png";
+import VOLKSWAGEN_LOGO from "../images/prompts/car_company_logos/volkswagen.png";
 
 // Update this value to add or update automotive logo prompts.
-export const CAR_LOGO_PROMPT_INFO: {
+export const CAR_COMPANY_LOGO_PROMPT_INFO: {
   [promptName: string]: { source: string; colors: string[] };
 } = {
   BMW: {

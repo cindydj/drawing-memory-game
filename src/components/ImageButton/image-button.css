@@ -25,4 +25,9 @@
     max-height: 70%;
     max-width: 70%;
   }
+
+  .button-text {
+    height: 1em;
+    max-width: 70%;
+  }
 }

@@ -3,7 +3,7 @@ import React from "react";
 import "./landing-page.css";
 import ImageButton from "../../components/ImageButton/ImageButton";
 import SLACKMOJI_LOGO from "../../images/meow_painter.png";
-import CAR_LOGO from "../../images/car.png";
+import CAR_COMPANY_LOGO from "../../images/car.png";
 import { useNavigate } from "react-router-dom";
 import { TOPICS, convertTopicToPath } from "../topics";
 
@@ -27,10 +27,10 @@ function LandingPage() {
           }}
         />
         <ImageButton
-          text={`${TOPICS.carLogos}s`}
-          imageSource={CAR_LOGO}
+          text={`${TOPICS.carCompanyLogos}s`}
+          imageSource={CAR_COMPANY_LOGO}
           onClick={() => {
-            navigate(convertTopicToPath(TOPICS.carLogos));
+            navigate(convertTopicToPath(TOPICS.carCompanyLogos));
           }}
         />
       </div>
