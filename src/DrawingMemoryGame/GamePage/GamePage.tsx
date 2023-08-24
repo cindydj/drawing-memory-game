@@ -8,6 +8,7 @@ import { ReactComponent as BackButton } from "../../images/back_arrow.svg";
 
 import "./game-page.css";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../router";
 
 interface GamePageProps {
   name: string;
@@ -59,10 +60,7 @@ function GamePage(props: GamePageProps) {
 
   return (
     <div className="page game-page">
-      <BackButton
-        className="back-button"
-        onClick={() => navigate("/drawing-memory-game/build")}
-      />
+      <BackButton className="back-button" onClick={() => navigate(BASE_URL)} />
       <div className="page-title">
         {name} Memory Game
         <div className="page-subtitle">

@@ -10,10 +10,11 @@ import { SLACKMOJI_PROMPT_INFO } from "./data/slackmoji_prompts";
 
 import "./index.css";
 import { convertTopicToPath, TOPICS } from "./DrawingMemoryGame/topics";
+import { BASE_URL } from "./DrawingMemoryGame/router";
 
 const router = createBrowserRouter([
   {
-    path: "/drawing-memory-game/build/",
+    path: BASE_URL,
     element: <LandingPage />,
     errorElement: (
       <div id="error-page" className="error-page">
