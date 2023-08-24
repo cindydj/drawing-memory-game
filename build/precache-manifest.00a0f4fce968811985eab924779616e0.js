@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "61990330b38fe08b8a72",
+    "revision": "210293e5ff67ebfb3c23",
     "url": "/drawing-memory-game/build/static/css/main.7f2f2a1b.chunk.css"
   },
   {
-    "revision": "61990330b38fe08b8a72",
-    "url": "/drawing-memory-game/build/static/js/main.61990330.chunk.js"
+    "revision": "210293e5ff67ebfb3c23",
+    "url": "/drawing-memory-game/build/static/js/main.210293e5.chunk.js"
   },
   {
     "revision": "53a5af81d77b8bbdf204",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/drawing-memory-game/build/static/media/back_arrow.f950258e.svg"
   },
   {
-    "revision": "a6fac4d5723c8eff671b2d39c75e90dd",
+    "revision": "6646afe8bc9d8d89468b741606269122",
     "url": "/drawing-memory-game/build/index.html"
   }
 ];
