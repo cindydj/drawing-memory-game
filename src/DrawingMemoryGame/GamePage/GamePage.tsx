@@ -59,7 +59,10 @@ function GamePage(props: GamePageProps) {
 
   return (
     <div className="page game-page">
-      <BackButton className="back-button" onClick={() => navigate("/")} />
+      <BackButton
+        className="back-button"
+        onClick={() => navigate("/drawing-memory-game/build")}
+      />
       <div className="page-title">
         {name} Memory Game
         <div className="page-subtitle">
