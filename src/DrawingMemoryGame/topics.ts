@@ -4,5 +4,7 @@ export const TOPICS = {
 };
 
 export const convertTopicToPath = (topicName: string): string => {
-  return `${topicName.toLowerCase().replace(" ", "-")}s`;
+  return `/drawing-memory-game/build/${topicName
+    .toLowerCase()
+    .replace(" ", "-")}s`;
 };
