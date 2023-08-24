@@ -41,11 +41,4 @@ export const SLACKMOJI_PROMPT_INFO: {
       "#FFFFFF", // white
     ],
   },
-  ":applied:": {
-    source: APPLIED_SLACKMOJI,
-    colors: [
-      "#1070FC", // blue
-      "#FFFFFF", // white
-    ],
-  },
 };
