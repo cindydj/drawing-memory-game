@@ -1,7 +1,7 @@
 {
   "main.css": "/drawing-memory-game/build/static/css/main.7f2f2a1b.chunk.css",
-  "main.js": "/drawing-memory-game/build/static/js/main.e87b8e5b.chunk.js",
-  "main.js.map": "/drawing-memory-game/build/static/js/main.e87b8e5b.chunk.js.map",
+  "main.js": "/drawing-memory-game/build/static/js/main.7606d785.chunk.js",
+  "main.js.map": "/drawing-memory-game/build/static/js/main.7606d785.chunk.js.map",
   "static/js/1.53a5af81.chunk.js": "/drawing-memory-game/build/static/js/1.53a5af81.chunk.js",
   "static/js/1.53a5af81.chunk.js.map": "/drawing-memory-game/build/static/js/1.53a5af81.chunk.js.map",
   "static/js/2.5c3f3b48.chunk.js": "/drawing-memory-game/build/static/js/2.5c3f3b48.chunk.js",
@@ -29,6 +29,6 @@
   "static/media/back_arrow.f950258e.svg": "/drawing-memory-game/build/static/media/back_arrow.f950258e.svg",
   "static/css/main.7f2f2a1b.chunk.css.map": "/drawing-memory-game/build/static/css/main.7f2f2a1b.chunk.css.map",
   "index.html": "/drawing-memory-game/build/index.html",
-  "precache-manifest.0b11c4f4bb3418ff79ff890058b1b588.js": "/drawing-memory-game/build/precache-manifest.0b11c4f4bb3418ff79ff890058b1b588.js",
+  "precache-manifest.999324b53ac964392e7d0efd966a7483.js": "/drawing-memory-game/build/precache-manifest.999324b53ac964392e7d0efd966a7483.js",
   "service-worker.js": "/drawing-memory-game/build/service-worker.js"
 }
