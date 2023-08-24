@@ -13,7 +13,7 @@ import { convertTopicToPath, TOPICS } from "./DrawingMemoryGame/topics";
 
 const router = createBrowserRouter([
   {
-    path: "/build/",
+    path: "/drawing-memory-game/build/",
     element: <LandingPage />,
     errorElement: (
       <div id="error-page" className="error-page">
