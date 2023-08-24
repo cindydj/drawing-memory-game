@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2264f33ee1e463fd162a",
+    "revision": "2a3a1dc28ef29bde01bc",
     "url": "/drawing-memory-game/static/css/main.7f2f2a1b.chunk.css"
   },
   {
-    "revision": "2264f33ee1e463fd162a",
-    "url": "/drawing-memory-game/static/js/main.2264f33e.chunk.js"
+    "revision": "2a3a1dc28ef29bde01bc",
+    "url": "/drawing-memory-game/static/js/main.2a3a1dc2.chunk.js"
   },
   {
     "revision": "53a5af81d77b8bbdf204",
@@ -40,6 +40,10 @@ self.__precacheManifest = [
     "url": "/drawing-memory-game/static/media/kodiak.ec4a1479.png"
   },
   {
+    "revision": "89a38b609b393b9cdfdd933c105ff051",
+    "url": "/drawing-memory-game/static/media/maserati.89a38b60.png"
+  },
+  {
     "revision": "cff5f255f9cda6b6de22b1cdec140661",
     "url": "/drawing-memory-game/static/media/mercedes_benz.cff5f255.png"
   },
@@ -58,10 +62,6 @@ self.__precacheManifest = [
   {
     "revision": "8412bc5243fb3027aab8ba706d484fab",
     "url": "/drawing-memory-game/static/media/volkswagen.8412bc52.png"
-  },
-  {
-    "revision": "c200d2c873d565c3e3ac7efcc942855c",
-    "url": "/drawing-memory-game/static/media/applied.c200d2c8.svg"
   },
   {
     "revision": "1fb2f76d7bde2a80deb3b51c413a53d3",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/drawing-memory-game/static/media/back_arrow.f950258e.svg"
   },
   {
-    "revision": "4c87f1f3472b1e145a8a72f7f6346747",
+    "revision": "a10d4d4aba0b1f33a74200265bfe3510",
     "url": "/drawing-memory-game/index.html"
   }
 ];
