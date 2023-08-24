@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/drawing-memory-game/precache-manifest.4ba11e132b50930c0c9cb8810115449f.js"
+  "/drawing-memory-game/build/precache-manifest.0b11c4f4bb3418ff79ff890058b1b588.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/drawing-memory-game/index.html", {
+workbox.routing.registerNavigationRoute("/drawing-memory-game/build/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
