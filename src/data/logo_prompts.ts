@@ -2,6 +2,7 @@ import BMW_LOGO from "../images/prompts/car_company_logos/bmw.png";
 import GATIK_LOGO from "../images/prompts/car_company_logos/gatik.png";
 import GENERAL_MOTORS_LOGO from "../images/prompts/car_company_logos/general_motors.png";
 import KODIAK_LOGO from "../images/prompts/car_company_logos/kodiak.png";
+import MASERATI_LOGO from "../images/prompts/car_company_logos/maserati.png";
 import MERCEDES_BENZ_LOGO from "../images/prompts/car_company_logos/mercedes_benz.png";
 import MOTIONAL_LOGO from "../images/prompts/car_company_logos/motional.png";
 import PORSCHE_LOGO from "../images/prompts/car_company_logos/porsche.png";
@@ -49,11 +50,27 @@ export const CAR_COMPANY_LOGO_PROMPT_INFO: {
       "#FFFFFF", // white
     ],
   },
+  Maserati: {
+    source: MASERATI_LOGO,
+    colors: [
+      "#000000", // black
+      "#FFFFFF", // white
+    ],
+  },
   Motional: {
     source: MOTIONAL_LOGO,
     colors: [
       "#5D49F4", // indigo
       "#FFFFFF", // white
+    ],
+  },
+  Porsche: {
+    source: PORSCHE_LOGO,
+    colors: [
+      "#E5C35B", // yellow,
+      "#000000", // black
+      "#9B062C", // dark red,
+      "#F7EAB2", // lighter yellow
     ],
   },
   Tesla: {
@@ -75,15 +92,6 @@ export const CAR_COMPANY_LOGO_PROMPT_INFO: {
     colors: [
       "#2759A2", // blue,
       "#FFFFFF", // white
-    ],
-  },
-  "Extra credit: Porsche (good luck lol)": {
-    source: PORSCHE_LOGO,
-    colors: [
-      "#E5C35B", // yellow,
-      "#000000", // black
-      "#9B062C", // dark red,
-      "#F7EAB2", // lighter yellow
     ],
   },
 };
